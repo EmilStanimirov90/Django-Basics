@@ -13,7 +13,39 @@
 </head>
 <body>
     {% include 'nav.html' %}
-{#    <h1>Hello User</h1>#}
+    
+    <h1>Hello User</h1>
+    <h1>Current time is: {{ current_time }}</h1>
+    <h1>AGE: {{ person.age }}</h1>
+    <h1>ID num 1: {{ ids.1 }}</h1>
+    <h1>ID filter join: {{ ids|join:',' }}</h1>
+    <h1>some filtered text: {{ some_text|truncatewords:6 }}</h1>
+    <h1>some chain filtered text: {{ some_text|slugify|capfirst }}</h1>
+    <h1>some chain filtered text: {{ some_text2|default:"[Empty]" }}</h1>
+    
+    {%  if some_text2 == 'hi' %}
+        <h1>{{ some_text2 }}</h1>
+    {%  else %}
+        <p>"No results"</p>
+    {% endif %}
+    
+    <ol>
+        {% for user in users %}
+            <li>{{ user|capfirst|upper }}</li>
+        {% endfor %}
+    </ol>
+    
+    <ol>
+        {% for user in users2 %}
+            <li>{{ user|capfirst|upper }}</li>
+        {% empty %}
+            <p>No Users</p>
+        {% endfor %}
+    </ol>
+    
+    {% lorem 3 p %}    
+    
+    
 {#    <form action="/" method="post">#}
 {#        {{ my_form.person_name }}#}
 {#        {{ my_form.checkboxes }}#}
