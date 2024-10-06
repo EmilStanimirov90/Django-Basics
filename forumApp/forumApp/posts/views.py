@@ -34,13 +34,13 @@ def dashboard(request):
             {
                 "title":" Project name",
                 "author": "Peter Parker",
-                "content": "some explanations",
+                "content": "some explanations some explanations some explanations",
                 "created_at":datetime.now(),
              },
             {
                 "title": " Project name 1",
                 "author": "",
-                "content": "some explanations",
+                "content": "**some** explanations",
                 "created_at": datetime.now(),
             },
             {
