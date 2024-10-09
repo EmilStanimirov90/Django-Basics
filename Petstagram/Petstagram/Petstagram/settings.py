@@ -31,10 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 MY_APPS = [
-    'Petstagram.photos.apps.PhotosConfig',
-    'Petstagram.pets.apps.PetsConfig',
-    'Petstagram.accounts.apps.AccountsConfig',
-    'Petstagram.common.apps.CommonConfig'
+    'Petstagram.photos',
+    'Petstagram.pets',
+    'Petstagram.accounts',
+    'Petstagram.common'
 
 ]
 INSTALLED_APPS = [
