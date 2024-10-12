@@ -1,12 +1,18 @@
 from django.core.validators import MinLengthValidator
 from django.db import models
 from Petstagram.pets.models import Pet
+from photos.validators import FileSizeValidator
 
 
 # Create your models here.
 
 class Photo(models.Model):
-    photo= models.ImageField()
+    photo= models.ImageField(
+        upload_to='mediafiles', # zapazvat se na servera
+        validators=[
+          FileSizeValidator(5)
+        ],
+    )
 
     description= models.TextField(
         max_length=300,
