@@ -14,45 +14,66 @@
 <body>
     
     {% include 'nav.html' %}
-    <div class="container">
-        <form method="post">
-        <button>Submit</button>
-        {% csrf_token %}
-        
-    </form>
     
-    <h1>Hello User</h1>
-    <h1>Current time is: {{ current_time }}</h1>
-    <h1>AGE: {{ person.age }}</h1>
-    <h1>ID num 1: {{ ids.1 }}</h1>
-    <h1>ID filter join: {{ ids|join:',' }}</h1>
-    <h1>some filtered text: {{ some_text|truncatewords:6 }}</h1>
-    <h1>some chain filtered text: {{ some_text|slugify|capfirst }}</h1>
-    <h1>some chain filtered text: {{ some_text2|default:"[Empty]" }}</h1>
     
-    {%  if some_text2 == 'hi' %}
-        <h1>{{ some_text2 }}</h1>
-    {%  else %}
-        <p>"No results"</p>
-    {% endif %}
     
-    <ol>
-        {% for user in users %}
-            <li>{{ user|capfirst|upper }}</li>
-        {% endfor %}
-    </ol>
     
-    <ol>
-        {% for user in users2 %}
-            <li>{{ user|capfirst|upper }}</li>
-        {% empty %}
-            <p>No Users</p>
-        {% endfor %}
-    </ol>
+{#    <form action="" method="post">#}
+{#        {{ my_form }}#}
+{#        {{ my_form.errors }}#}
+{#        {{ my_form.person_name.errors }}#}
+{#        {% csrf_token %}#}
+{#        <button>Submit</button>#}
+{#    </form>#}
     
-    {% lorem 3 p %}    
-        
-    </div>
+    
+{#    <div>#}
+{#        <form action="/" method="post">#}
+{#            {% csrf_token %}#}
+{#            <input type="text" name="person_name">#}
+{#            <input type="number" name="age">#}
+{#            <button>Submit</button>#}
+{#            <input type="submit" value="Submit">#}
+{#        </form>#}
+{#    </div>#}
+{#    <div class="container">#}
+{#        <form method="post">#}
+{#        <button>Submit</button>#}
+{#        {% csrf_token %}#}
+{#        </form>#}
+{#    #}
+{#    <h1>Hello User</h1>#}
+{#    <h1>Current time is: {{ current_time }}</h1>#}
+{#    <h1>AGE: {{ person.age }}</h1>#}
+{#    <h1>ID num 1: {{ ids.1 }}</h1>#}
+{#    <h1>ID filter join: {{ ids|join:',' }}</h1>#}
+{#    <h1>some filtered text: {{ some_text|truncatewords:6 }}</h1>#}
+{#    <h1>some chain filtered text: {{ some_text|slugify|capfirst }}</h1>#}
+{#    <h1>some chain filtered text: {{ some_text2|default:"[Empty]" }}</h1>#}
+{#    #}
+{#    {%  if some_text2 == 'hi' %}#}
+{#        <h1>{{ some_text2 }}</h1>#}
+{#    {%  else %}#}
+{#        <p>"No results"</p>#}
+{#    {% endif %}#}
+{#    #}
+{#    <ol>#}
+{#        {% for user in users %}#}
+{#            <li>{{ user|capfirst|upper }}</li>#}
+{#        {% endfor %}#}
+{#    </ol>#}
+{#    #}
+{#    <ol>#}
+{#        {% for user in users2 %}#}
+{#            <li>{{ user|capfirst|upper }}</li>#}
+{#        {% empty %}#}
+{#            <p>No Users</p>#}
+{#        {% endfor %}#}
+{#    </ol>#}
+{#    #}
+{#    {% lorem 3 p %}    #}
+{#        #}
+{#    </div>#}
     
     
     

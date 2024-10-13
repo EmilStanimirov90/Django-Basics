@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from forumApp.posts.views import add_post
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('forumApp.posts.urls')),
+    path('add-post/', add_post, name='add-post'),
 ]
